@@ -50,6 +50,9 @@ react-testing
 |  |-- jotto-react-content
 |  |-- jotto-redux
 |
+|-- images
+|-- markdown
+|
 |-- random-word-server-api
 |
 |__ setups
