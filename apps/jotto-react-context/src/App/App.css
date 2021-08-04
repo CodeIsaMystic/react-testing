@@ -1,0 +1,13 @@
+.app-component {
+  max-width: 650px;
+  margin-left: 150px;
+  padding: 70px 0;
+  background-color: #9759d5;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.app-component h1 {
+  text-align: center;
+  color: beige;
+}

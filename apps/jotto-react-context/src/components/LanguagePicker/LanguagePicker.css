@@ -1,0 +1,13 @@
+.language-picker-component {
+  margin-bottom: 150px;
+  margin-top: 30px;
+}
+
+.language-picker-component span {
+  padding: 10px;
+  margin: 8px;
+  background-color: rebeccapurple;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
