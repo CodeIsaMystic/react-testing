@@ -53,6 +53,7 @@ react-testing
 |
 |-- images
 |-- markdown
+|-- links
 |
 |-- random-word-server-api
 |
@@ -80,6 +81,14 @@ You can now run the Express Server on your `localhost`.
 ```shell
 npm start
 ```
+
+To run your tests suites with Jest on `watch` mode.
+
+```shell
+npm test
+```
+
+*NOTICE: you can even use `yarn` if you prefer to `npm`, also the syntax using the `run` keyword as `npm run start` for example.*
 
 <br>
 <br>
