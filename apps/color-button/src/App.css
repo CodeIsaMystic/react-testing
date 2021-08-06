@@ -1,12 +1,4 @@
-button {
-  font-size: 22px;
-  /* border-radius: 10px;*/
-  border: none;
-  width: 200px;
-  padding: 10px;
-  outline: none;
-}
-button:active,
-button:focus {
-  outline: 4px solid #fff8f8;
+/*  App container  */
+.app-container {
+  display: flex;
 }
