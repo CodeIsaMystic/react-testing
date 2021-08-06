@@ -1,5 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import App from "./App";
+import { replaceCamelCaseWithSpaces } from "./App";
 
 test("the button has the correct initial color and text", () => {
   render(<App />);
@@ -86,5 +87,19 @@ test("Clicked disabled button has grey background and reverts to white", () => {
   });
   const colorButton = screen.getByRole("button", {
     name: "Change to whitesmoke",
+  });
+});
+
+describe("space before camel-case Capital letters ", () => {
+  test("Works for no inner capital letter", () => {
+    expect(replaceCamelCaseWithSpaces("white")).toBe("white");
+  });
+  test("Works for one inner capital letter", () => {
+    expect(replaceCamelCaseWithSpaces("MidnightBlue")).toBe("Midnight Blue");
+  });
+  test("Works for multiple capital letters", () => {
+    expect(replaceCamelCaseWithSpaces("MediumVioletRed")).toBe(
+      "Medium Violet Red"
+    );
   });
 });
