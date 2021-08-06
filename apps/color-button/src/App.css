@@ -2,3 +2,12 @@
 .app-container {
   display: flex;
 }
+
+.app-container input {
+  margin-left: 40px;
+}
+
+.app-container label {
+  align-self: center;
+  margin-left: 0;
+}
