@@ -6,7 +6,7 @@ body {
   width: 100vw;
   height: 100vh;
   margin: 0;
-  background-color: #0f0f0f;
+  background-color: #242424;
   color: whitesmoke;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -22,23 +22,25 @@ code {
 }
 
 button {
-  font-size: 22px;
-  width: 280px;
+  width: 350px;
   padding: 10px;
+  font-size: 22px;
+  font-weight: 100;
+  color: whitesmoke;
 }
 
 button,
 input {
   border: none;
+  border-radius: 2px;
   margin: 10px;
-  outline: none;
-  color: #0f0f0f;
   transition: all 0.4s linear;
 }
 
+button,
 button:active,
 button:focus {
-  outline: 6px solid rebeccapurple;
+  outline: 4px solid rgb(223, 223, 223);
 }
 
 input {
