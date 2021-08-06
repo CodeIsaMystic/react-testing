@@ -49,6 +49,7 @@ react-testing
 |  |-- jotto-app
 |  |-- jotto-react-content
 |  |-- jotto-redux
+|  |-- color-button
 |
 |-- images
 |-- markdown
