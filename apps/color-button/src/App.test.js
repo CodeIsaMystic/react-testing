@@ -30,7 +30,7 @@ test("the button clicked change his text content", () => {
   });
 
   fireEvent.click(colorButton);
-  expect(colorButton.textContent).toBe("Change to Rebecca Purple");
+  expect(colorButton).toHaveTextContent("Change to Rebecca Purple");
 });
 
 test("initial button conditions", () => {

@@ -1,17 +1,17 @@
-import { useState } from "react";
+import { useState } from "react"
 
-import "./App.css";
+import "./App.css"
 
 export function replaceCamelCaseWithSpaces(colorName) {
-  return colorName.replace(/\B([A-Z])\B/g, " $1");
+  return colorName.replace(/\B([A-Z])\B/g, " $1")
 }
 
 function App() {
-  const [buttonColor, setButtonColor] = useState("RebeccaPurple");
-  const [disabled, setDisabled] = useState(false);
+  const [buttonColor, setButtonColor] = useState("RebeccaPurple")
+  const [disabled, setDisabled] = useState(false)
 
   const newButtonColor =
-    buttonColor === "RebeccaPurple" ? "MidnightBlue" : "RebeccaPurple";
+    buttonColor === "RebeccaPurple" ? "MidnightBlue" : "RebeccaPurple"
 
   return (
     <div className="app-container">
@@ -31,7 +31,7 @@ function App() {
       />
       <label htmlFor="disable-button-check">💨Disable the button</label>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
