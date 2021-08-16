@@ -1,7 +1,7 @@
 <div align="center">
   <img 
   src="https://www.ibrahima-ndaw.com/static/4996d6d31bd748e276b9055ebfce4e42/f3583/cover.png"
-  alt="react logo image" 
+  alt="react logo image"
   style="width: 850px; height: auto; margin: 0;"
   >
   <h1>React Testing Library by Kent C.Dodds</h1>
@@ -33,7 +33,7 @@
 
 ## Introduction about testing
 
-Writing tests should not be complicated so, ***"Always Keep Things Simple!!"***
+Writing tests should not be complicated so, **_"Always Keep Things Simple!!"_**
 
 **It only need to code clean and organized as much as possible** and it should allowing for us to test in a simplifying way.
 
@@ -54,20 +54,19 @@ Writing tests should not be complicated so, ***"Always Keep Things Simple!!"***
 
 ## Unit Tests
 
-
 ### Jest, "the test runner"
 
 **Jest is a delightful JavaScript Testing Framework** with a focus on simplicity.
-This framework designed to ensure correctness of any JavaScript codebase. 
+This framework designed to ensure correctness of any JavaScript codebase.
 It allows you to write tests with an approachable, familiar and feature-rich API that gives you results quickly.
 
-By ensuring your tests have unique global state, **Jest can reliably run tests in parallel**. 
+By ensuring your tests have unique global state, **Jest can reliably run tests in parallel**.
 To make things quick, **Jest runs previously failed tests first** and re-organizes runs based on how long test files take.
 
-**Generate code coverage by adding the flag --coverage**. 
+**Generate code coverage by adding the flag --coverage**.
 No additional setup needed. Jest can collect code coverage information from entire projects, including untested files.
 
-Jest uses a custom resolver for imports in your tests, making it simple to mock any object outside of your test’s scope. 
+Jest uses a custom resolver for imports in your tests, making it simple to mock any object outside of your test’s scope.
 You can **use mocked imports with the rich Mock Functions API to spy on function calls** with readable test syntax.
 
 <br>
@@ -79,7 +78,7 @@ You can **use mocked imports with the rich Mock Functions API to spy on function
 
 ### React Testing Library by KCD
 
-The `React Testing Library` is a very light-weight solution for testing React components. 
+The `React Testing Library` is a very light-weight solution for testing React components.
 **It provides light utility functions on top of `react-dom` and `react-dom/test-utils`** , in a way that encourages better testing practices.
 
 Its primary guiding principle is:
@@ -92,7 +91,7 @@ Its primary guiding principle is:
 
 **The React Testing Library created by Kent C. Dodds**, is a testing library known as "opinionated".
 Made initially for Reactjs, this library gives **a specific approach** to make and think our tests.
-It lets us **test our software the way the users use it**. 
+It lets us **test our software the way the users use it**.
 It provides a virtual DOM, and lets us find some elements...
 
 <br>
@@ -104,7 +103,6 @@ run them and determines whether it pass or fail.
 <br>
 <br>
 <br>
-
 
 #### What is not `react-testing-library`:
 
