@@ -1,4 +1,8 @@
-import { render, screen } from "@testing-library/react"
+import {
+  render,
+  screen,
+  waitForElementToBeRemoved,
+} from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import SummaryForm from "../SummaryForm"
 
@@ -36,9 +40,9 @@ it("should not show the PopOver text on start", () => {
   const popoverNullDefaultVal = screen.queryByText(
     /no ice cream will actually be delivered/i
   )
-  expect(popoverNullDefaultVal).toBeNull()
+  expect(popoverNullDefaultVal).not.toBeInTheDocument()
 })
-it("should show the PopOver text on hover and disappear when out", () => {
+it("should show the PopOver text on hover and disappear when out", async () => {
   render(<SummaryForm />)
   //popover appears upon mouseover of checkbox label
   const termsAndConditions = screen.getByText(/terms and conditions/i)
@@ -49,8 +53,7 @@ it("should show the PopOver text on hover and disappear when out", () => {
 
   //popover disappears when we mouse out
   userEvent.unhover(termsAndConditions)
-  const popoverBackToNull = screen.queryByText(
-    /no ice cream will be delivered/i
+  await waitForElementToBeRemoved(() =>
+    screen.queryByText(/no ice cream will actually be delivered/i)
   )
-  expect(popoverBackToNull).toBeNull()
 })
