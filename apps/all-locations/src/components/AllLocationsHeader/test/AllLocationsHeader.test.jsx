@@ -1,14 +1,14 @@
 import { render, screen } from "@testing-library/react"
-import Header from "../Header"
+import AllLocationsHeader from "../AllLocationsHeader"
 
 describe("header component basic test suite", () => {
   it("should set the Header component initial conditions", () => {
-    render(<Header />)
+    render(<AllLocationsHeader />)
 
     const headerH2 = screen.getByRole("heading", {
-      name: "All Locations",
+      name: "All locations",
     })
-    expect(headerH2).toHaveTextContent("All Locations")
+    expect(headerH2).toHaveTextContent("All locations")
 
     const headerH1 = screen.getByRole("heading", {
       name: "Acme Locations",

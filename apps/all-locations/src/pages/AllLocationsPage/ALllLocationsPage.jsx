@@ -1,12 +1,13 @@
 import React from "react"
-import Header from "../../components/Header/Header"
 
-import "./AllLocationsPage.css"
+import AllLocationsHeader from "../../components/AllLocationsHeader/AllLocationsHeader"
+import LocationCard from "../../components/LocationCard/LocationCard"
 
 function AllLocationsPage() {
   return (
     <div className="container">
-      <Header />
+      <AllLocationsHeader />
+      <LocationCard />
     </div>
   )
 }
