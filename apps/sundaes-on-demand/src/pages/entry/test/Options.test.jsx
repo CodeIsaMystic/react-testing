@@ -18,4 +18,20 @@ describe("tests on Options component", () => {
     // assertion
     expect(altText).toEqual(["Chocolate scoop", "Vanilla scoop"])
   })
+
+  it("should display image for each topping option from server", async () => {
+    render(<Options optionType="toppings" />)
+
+    // find the images
+    const toppingImages = await screen.findAllByRole("img", {
+      name: /topping$/i,
+    })
+    // assertion
+    expect(toppingImages).toHaveLength(2)
+
+    // confirm alt text
+    const altText = toppingImages.map((element) => element.alt)
+    // assertion
+    expect(altText).toEqual(["M&Ms topping", "Cherries topping"])
+  })
 })
