@@ -1,10 +1,3 @@
-<style type="text/css">
-body {
-    background-color: #001122;
-    color: #F2F2F2;
-}
-</style>
-
 <div align="center">
   <img src="./src/favicon.ico"></img>
 
@@ -54,8 +47,9 @@ All application pages and components should follow the [provided design](https:/
 
 ## Introduction
 
-As mentioned in the requirements, this "small code test application" is an sample of a real professional project.
+As mentioned in the requirements, this "small app test" is a sample of a real professional project.
 We attempt so, to think this app in terms of a large scalable application.
+I decided as much as can to think in terms of reusable components, trying to visualizing what could be the app in his complex version even If I do not have all the information. It would involve, for sure, to communicate with the teams (designers, leader and or backend) to adapt in consequence.
 
 ## First Thoughts
 
@@ -64,5 +58,24 @@ Before to start this kind of challenge, I clearly need to take some time to focu
 So, I personally attempt to work keeping those principles in mind, to imagine what could be the strong choices made by the company. And if I didn't have all the answers of my thoughts on this project, I've made my personal choices, according with the skills and the time I had to make this code test real.
 
 ## Structure
+
+```sh
+src/
+├── assets
+├── components
+│   ├── App
+│   ├── CardLocation
+│   ├── HeaderAllLocations
+│   └── ModalLocation
+├── containers
+│   └── ListLocations
+├── pages
+│   └── AllLocationsPage
+├── utils
+    ├── colors
+    ├── global
+    ├── index
+    └── typography
+```
 
 ## What's next
