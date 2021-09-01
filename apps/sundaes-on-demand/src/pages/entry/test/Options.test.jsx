@@ -1,7 +1,6 @@
 import { render, screen } from "../../../test-utils/testing-library-utils"
 
 import Options from "../Options"
-import { OrderDetailsProvider } from "../../../contexts/OrderDetails"
 
 describe("tests on Options component", () => {
   it("should display image for each scoop option from server", async () => {
