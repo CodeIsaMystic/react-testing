@@ -7,6 +7,7 @@ import ToppingsOptions from "./ToppingsOptions"
 import AlertBanner from "../common/AlertBanner"
 
 import { pricePerItem } from "../../constants"
+import { formatCurrency } from "../../utilities"
 import { useOrderDetails } from "../../contexts/OrderDetails"
 
 export default function Options({ optionType }) {
@@ -43,7 +44,7 @@ export default function Options({ optionType }) {
   return (
     <>
       <h2>{title}</h2>
-      <p>{pricePerItem[optionType]}$ each</p>
+      <p>{formatCurrency(pricePerItem[optionType])} each</p>
       <p>
         {title} total: {orderDetails.totals[optionType]}
       </p>
