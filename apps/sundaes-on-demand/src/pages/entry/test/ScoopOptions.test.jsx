@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event"
 
 import ScoopOptions from "../ScoopOptions"
 
-test.only("indicate if scoop count is non an integer or out of range", () => {
+test("indicate if scoop count is non an integer or out of range", () => {
   render(<ScoopOptions name="" imagePath="" updateItemCount={jest.fn()} />)
 
   // expect input to be invalid with negative value
