@@ -103,7 +103,7 @@ test("the order phases for happy path", async () => {
   // await screen.findByRole("checkbox", { name: "Cherries" })
 })
 
-test.only("Toppings header is not on the summary page if no toppings ordered", async () => {
+test("Toppings header is not on the summary page if no toppings ordered", async () => {
   // render the App
   render(<App />)
 
