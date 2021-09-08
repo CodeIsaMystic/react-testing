@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event"
 
 import App from "../App"
 
-it.only("should tests the order phases for happy path", async () => {
+test.only("the order phases for happy path", async () => {
   // render the App
   render(<App />)
 
@@ -67,12 +67,20 @@ it.only("should tests the order phases for happy path", async () => {
   })
   userEvent.click(confirmOrderButton)
 
+  // expecting Loading to show
+  const loading = screen.getByText(/loading/i)
+  expect(loading).toBeInTheDocument()
+
   // confirm order number on confirmation page
   // This one is async because there's a Post request to server in between summary  and confirmation  pages
   const thankYouHeader = await screen.findByRole("heading", {
     name: /thank you/i,
   })
   expect(thankYouHeader).toBeInTheDocument()
+
+  // expect that loading disappear
+  const notLoading = screen.queryByText("loading")
+  expect(notLoading).not.toBeInTheDocument()
 
   const orderNumber = await screen.findByText(/order number/i)
   expect(orderNumber).toBeInTheDocument()
