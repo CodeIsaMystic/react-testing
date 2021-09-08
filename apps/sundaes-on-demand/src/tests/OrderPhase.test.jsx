@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event"
 
 import App from "../App"
 
-test.only("the order phases for happy path", async () => {
+test("the order phases for happy path", async () => {
   // render the App
   render(<App />)
 
@@ -101,4 +101,37 @@ test.only("the order phases for happy path", async () => {
   // happening after tests are over
   // await screen.findByRole("spinbutton", { name: "Vanilla" })
   // await screen.findByRole("checkbox", { name: "Cherries" })
+})
+
+test.only("Toppings header is not on the summary page if no toppings ordered", async () => {
+  // render the App
+  render(<App />)
+
+  // add ice cream scoops and toppings
+  const vanillaInput = await screen.findByRole("spinbutton", {
+    name: "Vanilla",
+  })
+  userEvent.clear(vanillaInput)
+  userEvent.type(vanillaInput, "1")
+
+  // does not need to await because it already called the scoops end point with vanilla
+  const chocolateInput = screen.getByRole("spinbutton", {
+    name: "Chocolate",
+  })
+  userEvent.clear(chocolateInput)
+  userEvent.type(chocolateInput, "2")
+
+  // find and click the order button
+  const orderSummaryButton = screen.getByRole("button", {
+    name: /order sundae/i,
+  })
+  userEvent.click(orderSummaryButton)
+
+  const scoopsHeading = screen.getByRole("heading", { name: "Scoops: $6.00" })
+  expect(scoopsHeading).toBeInTheDocument()
+
+  const toppingsHeading = screen.queryByRole("heading", {
+    name: /toppings/i,
+  })
+  expect(toppingsHeading).not.toBeInTheDocument()
 })
