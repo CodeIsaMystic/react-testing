@@ -19,7 +19,6 @@
 
 - [Introduction about testing](#introduction-about-testing)
 - [Unit Tests](#unit-tests)
-  - [Jest, "the test runner"](#jest-the-test-runner)
   - [React Testing Library by KCD](#react-testing-library-by-kcd)
     - [What is not `react-testing-library`:](#what-is-not-react-testing-library)
 - [Links](#links)
@@ -54,28 +53,6 @@ Writing tests should not be complicated so, **_"Always Keep Things Simple!!"_**
 
 ## Unit Tests
 
-### Jest, "the test runner"
-
-**Jest is a delightful JavaScript Testing Framework** with a focus on simplicity.
-This framework designed to ensure correctness of any JavaScript codebase.
-It allows you to write tests with an approachable, familiar and feature-rich API that gives you results quickly.
-
-By ensuring your tests have unique global state, **Jest can reliably run tests in parallel**.
-To make things quick, **Jest runs previously failed tests first** and re-organizes runs based on how long test files take.
-
-**Generate code coverage by adding the flag --coverage**.
-No additional setup needed. Jest can collect code coverage information from entire projects, including untested files.
-
-Jest uses a custom resolver for imports in your tests, making it simple to mock any object outside of your test’s scope.
-You can **use mocked imports with the rich Mock Functions API to spy on function calls** with readable test syntax.
-
-<br>
-<br>
-<br>
-<br>
-
----
-
 ### React Testing Library by KCD
 
 The `React Testing Library` is a very light-weight solution for testing React components.
@@ -109,7 +86,7 @@ run them and determines whether it pass or fail.
 1. A test runner or framework
 2. Specific to a testing framework (though we recommend Jest as our preference, the library works with any framework. See Using Without Jest)
 
-> NOTE: This library is built on top of [DOM Testing Library](https://testing-library.com/docs/dom-testing-library/intro/) which is where most of the logic behind the queries is.
+**NOTE:** This library is built on top of [DOM Testing Library](https://testing-library.com/docs/dom-testing-library/intro/) which is where most of the logic behind the queries is.
 
 <br>
 <br>
