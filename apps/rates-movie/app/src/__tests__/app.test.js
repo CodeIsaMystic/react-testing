@@ -46,4 +46,18 @@ describe("App component", () => {
     await waitForElementToBeRemoved(() => screen.getByTestId("loading-element"))
     expect(screen.queryByText(/error loading movies/i)).toBeTruthy()
   })
+
+  test("should display list of movies after API request", async () => {
+    fetch.mockResponseOnce(JSON.stringify(movies))
+
+    act(() => {
+      render(<App />)
+    })
+
+    await waitForElementToBeRemoved(() => screen.getByTestId("loading-element"))
+    const moviesList = screen.getByTestId("movies-list-element")
+    expect(moviesList).toBeTruthy()
+    // testing children (movies = 2)
+    expect(moviesList.children.length).toBe(2)
+  })
 })
