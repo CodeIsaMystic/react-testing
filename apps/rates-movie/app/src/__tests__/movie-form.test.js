@@ -16,7 +16,7 @@ const movie = {
 }
 
 describe("Movie form Component", () => {
-  xtest("should have form elements", () => {
+  test("should have form elements", () => {
     const { getByLabelText, getByRole } = render(
       <MovieForm movie={empty_movie} />
     )
@@ -25,7 +25,7 @@ describe("Movie form Component", () => {
     expect(getByRole("button", { name: /create/i })).toBeTruthy()
   })
 
-  xtest("should display form elements with movie data", () => {
+  test("should display form elements with movie data", () => {
     const { getByLabelText, getByRole, debug } = render(
       <MovieForm movie={movie} />
     )

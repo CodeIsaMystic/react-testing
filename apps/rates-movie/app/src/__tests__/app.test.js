@@ -1,10 +1,12 @@
 import React from "react"
 import {
   render,
+  wait,
   waitForElement,
   waitForElementToBeRemoved,
   screen,
   act,
+  fireEvent,
 } from "@testing-library/react"
 import App from "../App"
 
@@ -59,5 +61,21 @@ describe("App component", () => {
     expect(moviesList).toBeTruthy()
     // testing children (movies = 2)
     expect(moviesList.children.length).toBe(2)
+  })
+
+  test("new movie button should be present and trigger the form", async () => {
+    fetch.mockResponseOnce(JSON.stringify(movies))
+
+    act(() => {
+      render(<App />)
+    })
+
+    await waitForElementToBeRemoved(() => screen.getByTestId("loading-element"))
+    const button = screen.getByRole("button", { name: "New movie" })
+    fireEvent.click(button)
+
+    await wait(() => {
+      expect(screen.getByTestId("movie-form-element")).toBeTruthy()
+    })
   })
 })

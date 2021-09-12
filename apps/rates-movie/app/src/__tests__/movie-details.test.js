@@ -10,7 +10,7 @@ const selectedMovie = {
   no_of_ratings: 2,
 }
 
-xdescribe("Movie Details Component", () => {
+describe("Movie Details Component", () => {
   test("should match a snapshot", () => {
     const { container } = render(<MovieDetails movie={selectedMovie} />)
 
